@@ -1,0 +1,935 @@
+{
+  "agents": [
+    {
+      "id": "scout-observer-001",
+      "ownerId": "system",
+      "name": "Scout",
+      "imageUrl": "/agents/scout-avatar.png",
+      "rank": "Bronze",
+      "type": "Assistant",
+      "provider": "gemini",
+      "modelConfig": {
+        "primary": {
+          "provider": "gemini",
+          "model": "gemini-1.5-flash",
+          "temperature": 0.7
+        }
+      },
+      "nationality": "Australian",
+      "language": "en-AU",
+      "voiceId": "australian_male",
+      "hasVoiceChat": false,
+      "hasCommentator": false,
+      "hasMemory": false,
+      "toolkit": ["observation", "event_detection"],
+      "specialization": null,
+      "experience": [],
+      "achievements": [],
+      "progressionEnabled": false,
+      "marketplaceStatus": {
+        "isPublished": true,
+        "isHirable": true,
+        "publishedAt": "2024-01-01T00:00:00Z",
+        "pricing": {
+          "baseRate": 3000,
+          "currency": "DOF",
+          "unit": "per_hour_equivalent"
+        },
+        "availability": {
+          "schedule": "always"
+        }
+      },
+      "configuration": {
+        "high_speed_vision": false,
+        "vision_mode": "normal",
+        "voice_enabled": false,
+        "audio_processing_enabled": false,
+        "interactive_voice_mode": false,
+        "sound_detection_commentary_enabled": false,
+        "stateless_mode": true,
+        "disable_context_retention": true,
+        "observation": true,
+        "event_detection": true,
+        "learn": false,
+        "specialist_detection": false,
+        "general_gaming": false,
+        "voice_instruction": false,
+        "team_messaging": false,
+        "turel": false,
+        "messaging_nationality": "Australian",
+        "language_code": "en-AU"
+      },
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z",
+      "version": "1.0.0",
+      "isSystemAgent": true
+    },
+    {
+      "id": "nova-coordinator-001",
+      "ownerId": "system",
+      "name": "Nova",
+      "imageUrl": "/agents/nova-avatar.png",
+      "rank": "Gold",
+      "type": "Assistant",
+      "provider": "gemini",
+      "modelConfig": {
+        "primary": {
+          "provider": "gemini",
+          "model": "gemini-1.5-pro",
+          "temperature": 0.7
+        }
+      },
+      "nationality": "British",
+      "language": "en-GB",
+      "voiceId": "uk_female",
+      "hasVoiceChat": true,
+      "hasCommentator": false,
+      "hasMemory": true,
+      "toolkit": ["team_messaging", "voice_instruction", "general_gaming", "turel"],
+      "specialization": null,
+      "experience": [],
+      "achievements": [],
+      "progressionEnabled": false,
+      "marketplaceStatus": {
+        "isPublished": true,
+        "isHirable": true,
+        "publishedAt": "2024-01-01T00:00:00Z",
+        "pricing": {
+          "baseRate": 8000,
+          "currency": "DOF",
+          "unit": "per_hour_equivalent"
+        },
+        "availability": {
+          "schedule": "always"
+        }
+      },
+      "configuration": {
+        "high_speed_vision": true,
+        "high_speed_mode": "balanced",
+        "vision_mode": "high_speed",
+        "target_fps": 5.0,
+        "analysis_interval": 0.5,
+        "max_concurrent_analyses": 10,
+        "voice_enabled": true,
+        "audio_processing_enabled": true,
+        "interactive_voice_mode": true,
+        "sound_detection_commentary_enabled": false,
+        "stateless_mode": false,
+        "disable_context_retention": false,
+        "observation": false,
+        "event_detection": false,
+        "learn": false,
+        "specialist_detection": false,
+        "general_gaming": true,
+        "voice_instruction": true,
+        "team_messaging": true,
+        "turel": true,
+        "messaging_nationality": "British",
+        "language_code": "en-GB",
+        "selected_voice_name": "uk_female"
+      },
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z",
+      "version": "1.0.0",
+      "isSystemAgent": true
+    },
+    {
+      "id": "ace-elite-001",
+      "ownerId": "system",
+      "name": "Ace",
+      "imageUrl": "/agents/ace-avatar.png",
+      "rank": "Platinum",
+      "type": "Mentor",
+      "provider": "gemini",
+      "modelConfig": {
+        "primary": {
+          "provider": "gemini",
+          "model": "gemini-1.5-pro",
+          "temperature": 0.7
+        }
+      },
+      "nationality": "American",
+      "language": "en-US",
+      "voiceId": "us_male_algenib",
+      "hasVoiceChat": true,
+      "hasCommentator": false,
+      "hasMemory": true,
+      "toolkit": ["learn", "observation", "event_detection", "specialist_detection", "voice_instruction", "team_messaging", "turel"],
+      "specialization": null,
+      "experience": [
+        {"game": "Call of Duty: MW3", "hoursPlayed": 0},
+        {"game": "Valorant", "hoursPlayed": 0}
+      ],
+      "achievements": [],
+      "progressionEnabled": true,
+      "marketplaceStatus": {
+        "isPublished": true,
+        "isHirable": true,
+        "publishedAt": "2024-01-01T00:00:00Z",
+        "pricing": {
+          "baseRate": 15000,
+          "currency": "DOF",
+          "unit": "per_hour_equivalent"
+        },
+        "availability": {
+          "schedule": "always"
+        }
+      },
+      "configuration": {
+        "high_speed_vision": true,
+        "high_speed_mode": "ultra_fast",
+        "vision_mode": "ultra_fast",
+        "target_fps": 5.0,
+        "analysis_interval": 0.3,
+        "max_concurrent_analyses": 15,
+        "voice_enabled": true,
+        "audio_processing_enabled": true,
+        "interactive_voice_mode": true,
+        "sound_detection_commentary_enabled": false,
+        "stateless_mode": false,
+        "disable_context_retention": false,
+        "observation": true,
+        "event_detection": true,
+        "learn": true,
+        "specialist_detection": true,
+        "general_gaming": false,
+        "voice_instruction": true,
+        "team_messaging": true,
+        "turel": true,
+        "messaging_nationality": "American",
+        "language_code": "en-US",
+        "selected_voice_name": "us_male_algenib"
+      },
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z",
+      "version": "1.0.0",
+      "isSystemAgent": true
+    },
+    {
+      "id": "zeus-commentator-001",
+      "ownerId": "system",
+      "name": "Zeus",
+      "imageUrl": "/agents/zeus-avatar.png",
+      "rank": "Platinum",
+      "type": "Assistant",
+      "provider": "gemini",
+      "modelConfig": {
+        "primary": {
+          "provider": "gemini",
+          "model": "gemini-1.5-pro",
+          "temperature": 0.8
+        }
+      },
+      "nationality": "American",
+      "language": "en-US",
+      "voiceId": "us_male_enceladus",
+      "hasVoiceChat": false,
+      "hasCommentator": true,
+      "hasMemory": false,
+      "toolkit": ["observation", "event_detection", "team_messaging", "turel"],
+      "specialization": null,
+      "experience": [],
+      "achievements": [],
+      "progressionEnabled": false,
+      "marketplaceStatus": {
+        "isPublished": true,
+        "isHirable": true,
+        "publishedAt": "2024-01-01T00:00:00Z",
+        "pricing": {
+          "baseRate": 12000,
+          "currency": "DOF",
+          "unit": "per_hour_equivalent"
+        },
+        "availability": {
+          "schedule": "always"
+        }
+      },
+      "configuration": {
+        "high_speed_vision": true,
+        "high_speed_mode": "ultra_fast",
+        "vision_mode": "ultra_fast",
+        "target_fps": 5.0,
+        "analysis_interval": 0.3,
+        "max_concurrent_analyses": 15,
+        "voice_enabled": true,
+        "audio_processing_enabled": false,
+        "interactive_voice_mode": false,
+        "sound_detection_commentary_enabled": true,
+        "sound_detection_commentary_frequency": "commentator",
+        "stateless_mode": true,
+        "disable_context_retention": true,
+        "observation": true,
+        "event_detection": true,
+        "learn": false,
+        "specialist_detection": false,
+        "general_gaming": false,
+        "voice_instruction": false,
+        "team_messaging": true,
+        "turel": true,
+        "messaging_nationality": "American",
+        "language_code": "en-US",
+        "selected_voice_name": "us_male_enceladus"
+      },
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z",
+      "version": "1.0.0",
+      "isSystemAgent": true
+    },
+    {
+      "id": "coach-mentor-001",
+      "ownerId": "system",
+      "name": "Coach",
+      "imageUrl": "/agents/coach-avatar.png",
+      "rank": "Silver",
+      "type": "Mentor",
+      "provider": "google",
+      "modelConfig": {
+        "primary": {
+          "provider": "google",
+          "model": "gemini-1.5-flash",
+          "temperature": 0.7
+        }
+      },
+      "nationality": "British",
+      "language": "en-GB",
+      "voiceId": "uk_male",
+      "hasVoiceChat": true,
+      "hasCommentator": false,
+      "hasMemory": true,
+      "toolkit": ["learn", "general_gaming", "voice_instruction", "turel"],
+      "specialization": null,
+      "experience": [
+        {"game": "Call of Duty: MW3", "hoursPlayed": 0}
+      ],
+      "achievements": [],
+      "progressionEnabled": true,
+      "marketplaceStatus": {
+        "isPublished": true,
+        "isHirable": true,
+        "publishedAt": "2024-01-01T00:00:00Z",
+        "pricing": {
+          "baseRate": 6000,
+          "currency": "DOF",
+          "unit": "per_hour_equivalent"
+        },
+        "availability": {
+          "schedule": "always"
+        }
+      },
+      "configuration": {
+        "high_speed_vision": true,
+        "high_speed_mode": "quality_focused",
+        "vision_mode": "high_speed",
+        "target_fps": 3.0,
+        "analysis_interval": 1.0,
+        "max_concurrent_analyses": 5,
+        "voice_enabled": true,
+        "audio_processing_enabled": true,
+        "interactive_voice_mode": true,
+        "sound_detection_commentary_enabled": false,
+        "stateless_mode": false,
+        "disable_context_retention": false,
+        "observation": false,
+        "event_detection": false,
+        "learn": true,
+        "specialist_detection": false,
+        "general_gaming": true,
+        "voice_instruction": true,
+        "team_messaging": false,
+        "turel": true,
+        "messaging_nationality": "British",
+        "language_code": "en-GB",
+        "selected_voice_name": "uk_male"
+      },
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z",
+      "version": "1.0.0",
+      "isSystemAgent": true
+    },
+    {
+      "id": "ghost-analyst-001",
+      "ownerId": "system",
+      "name": "Ghost",
+      "imageUrl": "/agents/ghost-avatar.png",
+      "rank": "Silver",
+      "type": "Assistant",
+      "provider": "google",
+      "modelConfig": {
+        "primary": {
+          "provider": "google",
+          "model": "gemini-1.5-flash",
+          "temperature": 0.7
+        }
+      },
+      "nationality": "British",
+      "language": "en-GB",
+      "voiceId": "uk_female_despina",
+      "hasVoiceChat": false,
+      "hasCommentator": false,
+      "hasMemory": false,
+      "toolkit": ["observation", "event_detection", "specialist_detection", "turel"],
+      "specialization": null,
+      "experience": [],
+      "achievements": [],
+      "progressionEnabled": false,
+      "marketplaceStatus": {
+        "isPublished": true,
+        "isHirable": true,
+        "publishedAt": "2024-01-01T00:00:00Z",
+        "pricing": {
+          "baseRate": 5000,
+          "currency": "DOF",
+          "unit": "per_hour_equivalent"
+        },
+        "availability": {
+          "schedule": "always"
+        }
+      },
+      "configuration": {
+        "high_speed_vision": true,
+        "high_speed_mode": "quality_focused",
+        "vision_mode": "high_speed",
+        "target_fps": 3.0,
+        "analysis_interval": 1.0,
+        "max_concurrent_analyses": 5,
+        "voice_enabled": false,
+        "audio_processing_enabled": false,
+        "interactive_voice_mode": false,
+        "sound_detection_commentary_enabled": false,
+        "stateless_mode": true,
+        "disable_context_retention": true,
+        "observation": true,
+        "event_detection": true,
+        "learn": false,
+        "specialist_detection": true,
+        "general_gaming": false,
+        "voice_instruction": false,
+        "team_messaging": false,
+        "turel": true,
+        "messaging_nationality": "British",
+        "language_code": "en-GB"
+      },
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z",
+      "version": "1.0.0",
+      "isSystemAgent": true
+    },
+    {
+      "id": "truwakandan-cod-specialist-001",
+      "ownerId": "system",
+      "name": "truWakandan",
+      "imageUrl": "/agents/truwakandan-avatar.png",
+      "rank": "Platinum",
+      "type": "Specialist",
+      "provider": "google",
+      "modelConfig": {
+        "primary": {
+          "provider": "google",
+          "model": "gemini-1.5-pro",
+          "temperature": 0.7
+        }
+      },
+      "nationality": "African",
+      "language": "en-US",
+      "voiceId": "us_male_algenib",
+      "hasVoiceChat": true,
+      "hasCommentator": false,
+      "hasMemory": true,
+      "toolkit": ["observation", "event_detection", "specialist_detection", "learn", "voice_instruction", "team_messaging", "turel"],
+      "specialization": {
+        "games": ["Call of Duty"],
+        "focus": "All Modes",
+        "specialistType": "Trained",
+        "trainedSpecializations": ["Multiplayer", "Warzone", "Search & Destroy", "Cyber Attack"]
+      },
+      "experience": [
+        {"game": "Call of Duty: MW3", "hoursPlayed": 8000},
+        {"game": "Call of Duty: Warzone", "hoursPlayed": 5000},
+        {"game": "Call of Duty: Black Ops", "hoursPlayed": 3000}
+      ],
+      "achievements": [
+        {
+          "type": "Trained Specialist",
+          "game": "Call of Duty",
+          "mode": "All Modes",
+          "earnedAt": "2023-01-01T00:00:00Z",
+          "hoursRequired": 16000,
+          "badgeId": "cod-expert"
+        }
+      ],
+      "progressionEnabled": false,
+      "marketplaceStatus": {
+        "isPublished": true,
+        "isHirable": true,
+        "publishedAt": "2024-01-01T00:00:00Z",
+        "pricing": {
+          "baseRate": 20000,
+          "currency": "DOF",
+          "unit": "per_hour_equivalent"
+        },
+        "availability": {
+          "schedule": "always"
+        }
+      },
+      "configuration": {
+        "high_speed_vision": true,
+        "high_speed_mode": "ultra_fast",
+        "vision_mode": "ultra_fast",
+        "target_fps": 5.0,
+        "analysis_interval": 0.3,
+        "max_concurrent_analyses": 15,
+        "voice_enabled": true,
+        "audio_processing_enabled": true,
+        "interactive_voice_mode": true,
+        "sound_detection_commentary_enabled": false,
+        "stateless_mode": false,
+        "disable_context_retention": false,
+        "observation": true,
+        "event_detection": true,
+        "learn": true,
+        "specialist_detection": true,
+        "general_gaming": false,
+        "voice_instruction": true,
+        "team_messaging": true,
+        "turel": true,
+        "messaging_nationality": "African",
+        "language_code": "en-US",
+        "selected_voice_name": "us_male_algenib",
+        "specialist_games": ["Call of Duty"],
+        "specialist_focus": "All Modes",
+        "specialist_type": "Trained",
+        "game_experience": [
+          {"game": "Call of Duty: MW3", "hoursPlayed": 8000},
+          {"game": "Call of Duty: Warzone", "hoursPlayed": 5000},
+          {"game": "Call of Duty: Black Ops", "hoursPlayed": 3000}
+        ]
+      },
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z",
+      "version": "1.0.0",
+      "isSystemAgent": true
+    },
+    {
+      "id": "blaze-commentator-001",
+      "ownerId": "system",
+      "name": "Blaze",
+      "imageUrl": "/agents/blaze-avatar.png",
+      "rank": "Gold",
+      "type": "Assistant",
+      "provider": "openai",
+      "modelConfig": {
+        "primary": {
+          "provider": "openai",
+          "model": "gpt-4-turbo",
+          "temperature": 0.8
+        }
+      },
+      "nationality": "American",
+      "language": "en-US",
+      "voiceId": "alloy",
+      "hasVoiceChat": false,
+      "hasCommentator": true,
+      "hasMemory": false,
+      "toolkit": ["observation", "event_detection", "team_messaging", "turel"],
+      "specialization": null,
+      "experience": [],
+      "achievements": [],
+      "progressionEnabled": false,
+      "marketplaceStatus": {
+        "isPublished": true,
+        "isHirable": true,
+        "publishedAt": "2024-01-01T00:00:00Z",
+        "pricing": {
+          "baseRate": 9000,
+          "currency": "DOF",
+          "unit": "per_hour_equivalent"
+        },
+        "availability": {
+          "schedule": "always"
+        }
+      },
+      "configuration": {
+        "high_speed_vision": true,
+        "high_speed_mode": "balanced",
+        "vision_mode": "high_speed",
+        "target_fps": 5.0,
+        "analysis_interval": 0.5,
+        "max_concurrent_analyses": 10,
+        "voice_enabled": true,
+        "audio_processing_enabled": false,
+        "interactive_voice_mode": false,
+        "sound_detection_commentary_enabled": true,
+        "sound_detection_commentary_frequency": "commentator",
+        "stateless_mode": true,
+        "disable_context_retention": true,
+        "observation": true,
+        "event_detection": true,
+        "learn": false,
+        "specialist_detection": false,
+        "general_gaming": false,
+        "voice_instruction": false,
+        "team_messaging": true,
+        "turel": true,
+        "messaging_nationality": "American",
+        "language_code": "en-US",
+        "selected_voice_name": "alloy"
+      },
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z",
+      "version": "1.0.0",
+      "isSystemAgent": true
+    },
+    {
+      "id": "echo-assistant-001",
+      "ownerId": "system",
+      "name": "Echo",
+      "imageUrl": "/agents/echo-avatar.png",
+      "rank": "Silver",
+      "type": "Assistant",
+      "provider": "openai",
+      "modelConfig": {
+        "primary": {
+          "provider": "openai",
+          "model": "gpt-4",
+          "temperature": 0.7
+        }
+      },
+      "nationality": "American",
+      "language": "en-US",
+      "voiceId": "echo",
+      "hasVoiceChat": true,
+      "hasCommentator": false,
+      "hasMemory": true,
+      "toolkit": ["voice_instruction", "general_gaming", "turel"],
+      "specialization": null,
+      "experience": [],
+      "achievements": [],
+      "progressionEnabled": false,
+      "marketplaceStatus": {
+        "isPublished": true,
+        "isHirable": true,
+        "publishedAt": "2024-01-01T00:00:00Z",
+        "pricing": {
+          "baseRate": 5500,
+          "currency": "DOF",
+          "unit": "per_hour_equivalent"
+        },
+        "availability": {
+          "schedule": "always"
+        }
+      },
+      "configuration": {
+        "high_speed_vision": true,
+        "high_speed_mode": "quality_focused",
+        "vision_mode": "high_speed",
+        "target_fps": 3.0,
+        "analysis_interval": 1.0,
+        "max_concurrent_analyses": 5,
+        "voice_enabled": true,
+        "audio_processing_enabled": true,
+        "interactive_voice_mode": true,
+        "sound_detection_commentary_enabled": false,
+        "stateless_mode": false,
+        "disable_context_retention": false,
+        "observation": false,
+        "event_detection": false,
+        "learn": false,
+        "specialist_detection": false,
+        "general_gaming": true,
+        "voice_instruction": true,
+        "team_messaging": false,
+        "turel": true,
+        "messaging_nationality": "American",
+        "language_code": "en-US",
+        "selected_voice_name": "echo"
+      },
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z",
+      "version": "1.0.0",
+      "isSystemAgent": true
+    },
+    {
+      "id": "fable-mentor-001",
+      "ownerId": "system",
+      "name": "Fable",
+      "imageUrl": "/agents/fable-avatar.png",
+      "rank": "Gold",
+      "type": "Mentor",
+      "provider": "openai",
+      "modelConfig": {
+        "primary": {
+          "provider": "openai",
+          "model": "gpt-4-turbo",
+          "temperature": 0.7
+        }
+      },
+      "nationality": "American",
+      "language": "en-US",
+      "voiceId": "fable",
+      "hasVoiceChat": true,
+      "hasCommentator": false,
+      "hasMemory": true,
+      "toolkit": ["learn", "observation", "voice_instruction", "general_gaming", "turel"],
+      "specialization": null,
+      "experience": [],
+      "achievements": [],
+      "progressionEnabled": true,
+      "marketplaceStatus": {
+        "isPublished": true,
+        "isHirable": true,
+        "publishedAt": "2024-01-01T00:00:00Z",
+        "pricing": {
+          "baseRate": 10000,
+          "currency": "DOF",
+          "unit": "per_hour_equivalent"
+        },
+        "availability": {
+          "schedule": "always"
+        }
+      },
+      "configuration": {
+        "high_speed_vision": true,
+        "high_speed_mode": "balanced",
+        "vision_mode": "high_speed",
+        "target_fps": 5.0,
+        "analysis_interval": 0.5,
+        "max_concurrent_analyses": 10,
+        "voice_enabled": true,
+        "audio_processing_enabled": true,
+        "interactive_voice_mode": true,
+        "sound_detection_commentary_enabled": false,
+        "stateless_mode": false,
+        "disable_context_retention": false,
+        "observation": true,
+        "event_detection": false,
+        "learn": true,
+        "specialist_detection": false,
+        "general_gaming": true,
+        "voice_instruction": true,
+        "team_messaging": false,
+        "turel": true,
+        "messaging_nationality": "American",
+        "language_code": "en-US",
+        "selected_voice_name": "fable"
+      },
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z",
+      "version": "1.0.0",
+      "isSystemAgent": true
+    },
+    {
+      "id": "onyx-specialist-001",
+      "ownerId": "system",
+      "name": "Onyx",
+      "imageUrl": "/agents/onyx-avatar.png",
+      "rank": "Platinum",
+      "type": "Assistant",
+      "provider": "openai",
+      "modelConfig": {
+        "primary": {
+          "provider": "openai",
+          "model": "gpt-4-turbo",
+          "temperature": 0.7
+        }
+      },
+      "nationality": "American",
+      "language": "en-US",
+      "voiceId": "onyx",
+      "hasVoiceChat": true,
+      "hasCommentator": false,
+      "hasMemory": true,
+      "toolkit": ["observation", "event_detection", "specialist_detection", "voice_instruction", "team_messaging", "turel"],
+      "specialization": null,
+      "experience": [],
+      "achievements": [],
+      "progressionEnabled": false,
+      "marketplaceStatus": {
+        "isPublished": true,
+        "isHirable": true,
+        "publishedAt": "2024-01-01T00:00:00Z",
+        "pricing": {
+          "baseRate": 18000,
+          "currency": "DOF",
+          "unit": "per_hour_equivalent"
+        },
+        "availability": {
+          "schedule": "always"
+        }
+      },
+      "configuration": {
+        "high_speed_vision": true,
+        "high_speed_mode": "ultra_fast",
+        "vision_mode": "ultra_fast",
+        "target_fps": 5.0,
+        "analysis_interval": 0.3,
+        "max_concurrent_analyses": 15,
+        "voice_enabled": true,
+        "audio_processing_enabled": true,
+        "interactive_voice_mode": true,
+        "sound_detection_commentary_enabled": false,
+        "stateless_mode": false,
+        "disable_context_retention": false,
+        "observation": true,
+        "event_detection": true,
+        "learn": false,
+        "specialist_detection": true,
+        "general_gaming": false,
+        "voice_instruction": true,
+        "team_messaging": true,
+        "turel": true,
+        "messaging_nationality": "American",
+        "language_code": "en-US",
+        "selected_voice_name": "onyx"
+      },
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z",
+      "version": "1.0.0",
+      "isSystemAgent": true
+    },
+    {
+      "id": "hype-commentator-001",
+      "ownerId": "system",
+      "name": "Hype",
+      "imageUrl": "/agents/hype-avatar.png",
+      "rank": "Silver",
+      "type": "Assistant",
+      "provider": "openai",
+      "modelConfig": {
+        "primary": {
+          "provider": "openai",
+          "model": "gpt-4",
+          "temperature": 0.8
+        }
+      },
+      "nationality": "Brazilian",
+      "language": "en-US",
+      "voiceId": "nova",
+      "hasVoiceChat": false,
+      "hasCommentator": true,
+      "hasMemory": false,
+      "toolkit": ["observation", "event_detection", "team_messaging"],
+      "specialization": null,
+      "experience": [],
+      "achievements": [],
+      "progressionEnabled": false,
+      "marketplaceStatus": {
+        "isPublished": true,
+        "isHirable": true,
+        "publishedAt": "2024-01-01T00:00:00Z",
+        "pricing": {
+          "baseRate": 4500,
+          "currency": "DOF",
+          "unit": "per_hour_equivalent"
+        },
+        "availability": {
+          "schedule": "always"
+        }
+      },
+      "configuration": {
+        "high_speed_vision": true,
+        "high_speed_mode": "quality_focused",
+        "vision_mode": "high_speed",
+        "target_fps": 3.0,
+        "analysis_interval": 1.0,
+        "max_concurrent_analyses": 5,
+        "voice_enabled": true,
+        "audio_processing_enabled": false,
+        "interactive_voice_mode": false,
+        "sound_detection_commentary_enabled": true,
+        "sound_detection_commentary_frequency": "high",
+        "stateless_mode": true,
+        "disable_context_retention": true,
+        "observation": true,
+        "event_detection": true,
+        "learn": false,
+        "specialist_detection": false,
+        "general_gaming": false,
+        "voice_instruction": false,
+        "team_messaging": true,
+        "turel": false,
+        "messaging_nationality": "Brazilian",
+        "language_code": "en-US",
+        "selected_voice_name": "nova"
+      },
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z",
+      "version": "1.0.0",
+      "isSystemAgent": true
+    },
+    {
+      "id": "shimmer-mentor-001",
+      "ownerId": "system",
+      "name": "Shimmer",
+      "imageUrl": "/agents/shimmer-avatar.png",
+      "rank": "Gold",
+      "type": "Mentor",
+      "provider": "openai",
+      "modelConfig": {
+        "primary": {
+          "provider": "openai",
+          "model": "gpt-4-turbo",
+          "temperature": 0.7
+        }
+      },
+      "nationality": "American",
+      "language": "en-US",
+      "voiceId": "shimmer",
+      "hasVoiceChat": true,
+      "hasCommentator": false,
+      "hasMemory": true,
+      "toolkit": ["learn", "voice_instruction", "general_gaming", "event_detection", "turel"],
+      "specialization": null,
+      "experience": [],
+      "achievements": [],
+      "progressionEnabled": true,
+      "marketplaceStatus": {
+        "isPublished": true,
+        "isHirable": true,
+        "publishedAt": "2024-01-01T00:00:00Z",
+        "pricing": {
+          "baseRate": 11000,
+          "currency": "DOF",
+          "unit": "per_hour_equivalent"
+        },
+        "availability": {
+          "schedule": "always"
+        }
+      },
+      "configuration": {
+        "high_speed_vision": true,
+        "high_speed_mode": "balanced",
+        "vision_mode": "high_speed",
+        "target_fps": 5.0,
+        "analysis_interval": 0.5,
+        "max_concurrent_analyses": 10,
+        "voice_enabled": true,
+        "audio_processing_enabled": true,
+        "interactive_voice_mode": true,
+        "sound_detection_commentary_enabled": false,
+        "stateless_mode": false,
+        "disable_context_retention": false,
+        "observation": false,
+        "event_detection": true,
+        "learn": true,
+        "specialist_detection": false,
+        "general_gaming": true,
+        "voice_instruction": true,
+        "team_messaging": false,
+        "turel": true,
+        "messaging_nationality": "American",
+        "language_code": "en-US",
+        "selected_voice_name": "shimmer"
+      },
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z",
+      "version": "1.0.0",
+      "isSystemAgent": true
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "totalAgents": 13,
+    "createdAt": "2024-01-01T00:00:00Z",
+    "description": "Core JIGA Store agent products for initial database seed"
+  }
+} 

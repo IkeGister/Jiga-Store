@@ -1,0 +1,54 @@
+{
+  "name": "jiga-store",
+  "version": "1.0.0",
+  "description": "Marketplace platform for AI-powered gaming assistants",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "verify": "node scripts/verify-credentials.js",
+    "verify:test": "node scripts/verify-credentials.js --test",
+    "seed": "node scripts/seed-database.js",
+    "dev": "echo 'Development server not yet implemented'",
+    "build": "echo 'Build process not yet implemented'",
+    "start": "echo 'Production server not yet implemented'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IkeGister/Jiga-Store.git"
+  },
+  "keywords": [
+    "marketplace",
+    "gaming",
+    "ai",
+    "agents",
+    "firebase",
+    "shopify"
+  ],
+  "author": "IkeGister",
+  "license": "PROPRIETARY",
+  "bugs": {
+    "url": "https://github.com/IkeGister/Jiga-Store/issues"
+  },
+  "homepage": "https://github.com/IkeGister/Jiga-Store#readme",
+  "dependencies": {
+    "firebase-admin": "^12.0.0",
+    "dotenv": "^16.0.0",
+    "chalk": "^4.1.2",
+    "algoliasearch": "^4.20.0",
+    "redis": "^4.6.0",
+    "@shopify/shopify-api": "^9.0.0",
+    "@sentry/node": "^7.100.0"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
+} 

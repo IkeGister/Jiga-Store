@@ -1,0 +1,117 @@
+# Environment variables
+.env
+.env.local
+.env.production
+.env.development
+.env.test
+
+# Dependencies
+node_modules/
+bower_components/
+
+# Testing
+coverage/
+.nyc_output/
+
+# Build outputs
+dist/
+build/
+out/
+.next/
+.nuxt/
+.cache/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Firebase
+.firebase/
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+firebase-export-*/
+firestore.rules
+firestore.indexes.json
+
+# Credentials (extra safety)
+credentials/
+*.pem
+*.key
+*.cert
+*.json
+!package.json
+!package-lock.json
+!tsconfig.json
+!data/*.json
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Cache
+.eslintcache
+.stylelintcache
+
+# TypeScript
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Yarn
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# Serverless
+.serverless/
+
+# Local development
+.local/
+
+# Shopify
+.shopify
+
+# Python (if any scripts)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+
+# Backup files
+*.backup
+*.bak
+
+# Lock files (keep these)
+!package-lock.json
+!yarn.lock
+!pnpm-lock.yaml 

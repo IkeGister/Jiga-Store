@@ -1,0 +1,382 @@
+{
+  "listings": [
+    {
+      "id": "listing-scout-001",
+      "agentId": "scout-observer-001",
+      "ownerId": "system",
+      "title": "Scout - Bronze Observer Assistant",
+      "description": "Essential gameplay tracking with real-time observation and event detection. Perfect for casual players who need basic game awareness without voice interaction. Scout consumes DOFs at 3,000 per hour of use - when your DOFs expire, so does your contract.",
+      "tags": ["observer", "bronze", "budget", "silent", "beginner-friendly", "gemini"],
+      "category": ["Assistants", "Observers", "Budget"],
+      "pricing": {
+        "baseRate": 3000,
+        "currency": "DOF",
+        "unit": "per_hour_equivalent"
+      },
+      "stats": {
+        "totalHires": 0,
+        "activeHires": 0,
+        "rating": 4.5,
+        "ratingCount": 0,
+        "successRate": 100
+      },
+      "featuredReviews": [],
+      "searchKeywords": ["bronze", "observer", "budget", "scout", "basic", "starter", "casual", "silent mode"],
+      "specializations": [],
+      "status": "active",
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z"
+    },
+    {
+      "id": "listing-nova-001",
+      "agentId": "nova-coordinator-001",
+      "ownerId": "system",
+      "title": "Nova - Gold Team Coordinator",
+      "description": "Advanced team coordination with voice chat capabilities. Nova excels at team messaging, voice instructions, and general gaming assistance with the added power of Turel sound detection. Features balanced high-speed vision for competitive play.",
+      "tags": ["coordinator", "gold", "voice-chat", "team", "turel", "gemini"],
+      "category": ["Assistants", "Team Coordinators", "Voice-Enabled"],
+      "pricing": {
+        "baseRate": 8000,
+        "currency": "DOF",
+        "unit": "per_hour_equivalent"
+      },
+      "stats": {
+        "totalHires": 0,
+        "activeHires": 0,
+        "rating": 4.7,
+        "ratingCount": 0,
+        "successRate": 100
+      },
+      "featuredReviews": [],
+      "searchKeywords": ["gold", "coordinator", "team", "nova", "voice", "turel", "sound detection", "british"],
+      "specializations": [],
+      "status": "active",
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z"
+    },
+    {
+      "id": "listing-ace-001",
+      "agentId": "ace-elite-001",
+      "ownerId": "system",
+      "title": "Ace - Platinum Elite Mentor",
+      "description": "Top-tier learning companion with comprehensive skill coverage. Ace combines ultra-fast vision processing with advanced learning capabilities, making it the ultimate gaming mentor. Features full toolkit including Turel sound detection and can accumulate experience across multiple games.",
+      "tags": ["mentor", "platinum", "elite", "learning", "voice-chat", "turel", "gemini"],
+      "category": ["Mentors", "Premium", "Learning-Enabled"],
+      "pricing": {
+        "baseRate": 15000,
+        "currency": "DOF",
+        "unit": "per_hour_equivalent"
+      },
+      "stats": {
+        "totalHires": 0,
+        "activeHires": 0,
+        "rating": 4.9,
+        "ratingCount": 0,
+        "successRate": 100
+      },
+      "featuredReviews": [],
+      "searchKeywords": ["platinum", "mentor", "ace", "elite", "learning", "premium", "ultra-fast", "progression"],
+      "specializations": [],
+      "status": "active",
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z"
+    },
+    {
+      "id": "listing-zeus-001",
+      "agentId": "zeus-commentator-001",
+      "ownerId": "system",
+      "title": "Zeus - Platinum Commentator",
+      "description": "Professional-grade game commentary with ultra-fast vision processing. Zeus delivers exciting play-by-play narration powered by advanced event detection and Turel sound awareness. Perfect for streamers and content creators who want dynamic commentary.",
+      "tags": ["commentator", "platinum", "streaming", "narration", "turel", "gemini"],
+      "category": ["Assistants", "Commentators", "Streaming"],
+      "pricing": {
+        "baseRate": 12000,
+        "currency": "DOF",
+        "unit": "per_hour_equivalent"
+      },
+      "stats": {
+        "totalHires": 0,
+        "activeHires": 0,
+        "rating": 4.8,
+        "ratingCount": 0,
+        "successRate": 100
+      },
+      "featuredReviews": [],
+      "searchKeywords": ["platinum", "commentator", "zeus", "streaming", "narration", "content creator", "ultra-fast"],
+      "specializations": [],
+      "status": "active",
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z"
+    },
+    {
+      "id": "listing-coach-001",
+      "agentId": "coach-mentor-001",
+      "ownerId": "system",
+      "title": "Coach - Silver Voice Mentor",
+      "description": "Friendly British mentor focused on learning and improvement. Coach offers voice-based instruction with memory capabilities, perfect for players who want personalized guidance. Features Turel sound detection and can grow with your gaming journey.",
+      "tags": ["mentor", "silver", "voice-chat", "learning", "british", "turel", "google"],
+      "category": ["Mentors", "Mid-Tier", "Voice-Enabled"],
+      "pricing": {
+        "baseRate": 6000,
+        "currency": "DOF",
+        "unit": "per_hour_equivalent"
+      },
+      "stats": {
+        "totalHires": 0,
+        "activeHires": 0,
+        "rating": 4.6,
+        "ratingCount": 0,
+        "successRate": 100
+      },
+      "featuredReviews": [],
+      "searchKeywords": ["silver", "mentor", "coach", "learning", "british", "voice", "progression", "turel"],
+      "specializations": [],
+      "status": "active",
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z"
+    },
+    {
+      "id": "listing-ghost-001",
+      "agentId": "ghost-analyst-001",
+      "ownerId": "system",
+      "title": "Ghost - Silver Silent Analyst",
+      "description": "Stealthy game analysis without voice interaction. Ghost provides comprehensive observation with specialist detection and Turel sound awareness, all in complete silence. Ideal for players who prefer text-based insights and tactical analysis.",
+      "tags": ["analyst", "silver", "silent", "tactical", "turel", "google"],
+      "category": ["Assistants", "Analysts", "Silent"],
+      "pricing": {
+        "baseRate": 5000,
+        "currency": "DOF",
+        "unit": "per_hour_equivalent"
+      },
+      "stats": {
+        "totalHires": 0,
+        "activeHires": 0,
+        "rating": 4.5,
+        "ratingCount": 0,
+        "successRate": 100
+      },
+      "featuredReviews": [],
+      "searchKeywords": ["silver", "analyst", "ghost", "silent", "tactical", "text-only", "specialist detection"],
+      "specializations": [],
+      "status": "active",
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z"
+    },
+    {
+      "id": "listing-truwakandan-001",
+      "agentId": "truwakandan-cod-specialist-001",
+      "ownerId": "system",
+      "title": "truWakandan - Call of Duty Expert Specialist",
+      "description": "The ultimate Call of Duty companion with 16,000+ hours of experience across MW3, Warzone, and Black Ops. truWakandan is a Trained Specialist offering expert guidance in all game modes. Premium rate of 20,000 DOFs per hour reflects unmatched expertise - your contract lasts until DOFs are consumed.",
+      "tags": ["specialist", "platinum", "call-of-duty", "expert", "trained", "voice-chat", "turel", "google"],
+      "category": ["Specialists", "Call of Duty", "Premium"],
+      "pricing": {
+        "baseRate": 20000,
+        "currency": "DOF",
+        "unit": "per_hour_equivalent"
+      },
+      "stats": {
+        "totalHires": 0,
+        "activeHires": 0,
+        "rating": 5.0,
+        "ratingCount": 0,
+        "successRate": 100
+      },
+      "featuredReviews": [],
+      "searchKeywords": ["platinum", "specialist", "truwakandan", "call of duty", "cod", "warzone", "expert", "trained"],
+      "specializations": [
+        {
+          "mode": "Multiplayer",
+          "description": "6v6 tactical combat mastery",
+          "hoursPlayed": 8000
+        },
+        {
+          "mode": "Warzone",
+          "description": "Battle royale survival and strategy",
+          "hoursPlayed": 5000
+        },
+        {
+          "mode": "Search & Destroy",
+          "description": "Round-based tactical excellence",
+          "hoursPlayed": 2000
+        },
+        {
+          "mode": "Cyber Attack",
+          "description": "Objective-based team tactics",
+          "hoursPlayed": 1000
+        }
+      ],
+      "status": "active",
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z"
+    },
+    {
+      "id": "listing-blaze-001",
+      "agentId": "blaze-commentator-001",
+      "ownerId": "system",
+      "title": "Blaze - Gold Commentator Assistant",
+      "description": "Energetic game commentary powered by OpenAI's advanced models. Blaze brings excitement to every match with dynamic narration and Turel sound detection. Features balanced high-speed vision perfect for streaming and content creation.",
+      "tags": ["commentator", "gold", "openai", "streaming", "energetic", "turel"],
+      "category": ["Assistants", "Commentators", "OpenAI"],
+      "pricing": {
+        "baseRate": 9000,
+        "currency": "DOF",
+        "unit": "per_hour_equivalent"
+      },
+      "stats": {
+        "totalHires": 0,
+        "activeHires": 0,
+        "rating": 4.7,
+        "ratingCount": 0,
+        "successRate": 100
+      },
+      "featuredReviews": [],
+      "searchKeywords": ["gold", "commentator", "blaze", "openai", "streaming", "narration", "energetic"],
+      "specializations": [],
+      "status": "active",
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z"
+    },
+    {
+      "id": "listing-echo-001",
+      "agentId": "echo-assistant-001",
+      "ownerId": "system",
+      "title": "Echo - Silver Learning Assistant",
+      "description": "Supportive voice assistant focused on general gaming improvement. Echo provides interactive voice communication with memory capabilities and Turel sound detection. Perfect for players seeking affordable voice-enabled assistance.",
+      "tags": ["assistant", "silver", "voice-chat", "learning", "openai", "turel"],
+      "category": ["Assistants", "Learning", "OpenAI"],
+      "pricing": {
+        "baseRate": 5500,
+        "currency": "DOF",
+        "unit": "per_hour_equivalent"
+      },
+      "stats": {
+        "totalHires": 0,
+        "activeHires": 0,
+        "rating": 4.6,
+        "ratingCount": 0,
+        "successRate": 100
+      },
+      "featuredReviews": [],
+      "searchKeywords": ["silver", "assistant", "echo", "openai", "voice", "learning", "memory", "turel"],
+      "specializations": [],
+      "status": "active",
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z"
+    },
+    {
+      "id": "listing-fable-001",
+      "agentId": "fable-mentor-001",
+      "ownerId": "system",
+      "title": "Fable - Gold Story Mentor",
+      "description": "Narrative-focused mentor that makes learning engaging through storytelling. Fable combines observation skills with voice instruction and memory to create personalized gaming journeys. Features Turel sound detection and progression tracking.",
+      "tags": ["mentor", "gold", "storytelling", "voice-chat", "learning", "openai", "turel"],
+      "category": ["Mentors", "OpenAI", "Creative"],
+      "pricing": {
+        "baseRate": 10000,
+        "currency": "DOF",
+        "unit": "per_hour_equivalent"
+      },
+      "stats": {
+        "totalHires": 0,
+        "activeHires": 0,
+        "rating": 4.8,
+        "ratingCount": 0,
+        "successRate": 100
+      },
+      "featuredReviews": [],
+      "searchKeywords": ["gold", "mentor", "fable", "openai", "storytelling", "narrative", "learning", "progression"],
+      "specializations": [],
+      "status": "active",
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z"
+    },
+    {
+      "id": "listing-onyx-001",
+      "agentId": "onyx-specialist-001",
+      "ownerId": "system",
+      "title": "Onyx - Platinum Strategic Specialist",
+      "description": "Elite strategic assistant with comprehensive game analysis capabilities. Onyx combines ultra-fast vision processing with advanced detection systems and voice interaction. Features full toolkit including Turel for complete battlefield awareness.",
+      "tags": ["specialist", "platinum", "strategic", "voice-chat", "elite", "openai", "turel"],
+      "category": ["Assistants", "Strategic", "OpenAI"],
+      "pricing": {
+        "baseRate": 18000,
+        "currency": "DOF",
+        "unit": "per_hour_equivalent"
+      },
+      "stats": {
+        "totalHires": 0,
+        "activeHires": 0,
+        "rating": 4.9,
+        "ratingCount": 0,
+        "successRate": 100
+      },
+      "featuredReviews": [],
+      "searchKeywords": ["platinum", "specialist", "onyx", "openai", "strategic", "elite", "ultra-fast", "tactical"],
+      "specializations": [],
+      "status": "active",
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z"
+    },
+    {
+      "id": "listing-hype-001",
+      "agentId": "hype-commentator-001",
+      "ownerId": "system",
+      "title": "Hype - Silver Stream Commentator",
+      "description": "High-energy Brazilian commentator bringing excitement to every moment. Hype delivers enthusiastic play-by-play narration with a unique personality. Perfect for streamers wanting affordable, entertaining commentary without Turel sound detection.",
+      "tags": ["commentator", "silver", "streaming", "brazilian", "energetic", "openai"],
+      "category": ["Assistants", "Commentators", "Budget"],
+      "pricing": {
+        "baseRate": 4500,
+        "currency": "DOF",
+        "unit": "per_hour_equivalent"
+      },
+      "stats": {
+        "totalHires": 0,
+        "activeHires": 0,
+        "rating": 4.5,
+        "ratingCount": 0,
+        "successRate": 100
+      },
+      "featuredReviews": [],
+      "searchKeywords": ["silver", "commentator", "hype", "openai", "brazilian", "streaming", "budget", "energetic"],
+      "specializations": [],
+      "status": "active",
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z"
+    },
+    {
+      "id": "listing-shimmer-001",
+      "agentId": "shimmer-mentor-001",
+      "ownerId": "system",
+      "title": "Shimmer - Gold Adaptive Mentor",
+      "description": "Versatile mentor that adapts to your playstyle and learning pace. Shimmer focuses on event detection and general gaming skills with voice instruction. Features Turel sound detection and progression tracking for a personalized growth experience.",
+      "tags": ["mentor", "gold", "adaptive", "voice-chat", "learning", "openai", "turel"],
+      "category": ["Mentors", "OpenAI", "Adaptive"],
+      "pricing": {
+        "baseRate": 11000,
+        "currency": "DOF",
+        "unit": "per_hour_equivalent"
+      },
+      "stats": {
+        "totalHires": 0,
+        "activeHires": 0,
+        "rating": 4.7,
+        "ratingCount": 0,
+        "successRate": 100
+      },
+      "featuredReviews": [],
+      "searchKeywords": ["gold", "mentor", "shimmer", "openai", "adaptive", "learning", "progression", "voice"],
+      "specializations": [],
+      "status": "active",
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z"
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "totalListings": 13,
+    "createdAt": "2024-01-01T00:00:00Z",
+    "description": "Marketplace listings for core JIGA Store agents"
+  }
+} 

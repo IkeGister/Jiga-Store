@@ -1,0 +1,273 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "JIGA Agent Schema",
+  "description": "Schema for JIGA Store agent data structure",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z-]+-[a-z]+-[0-9]{3}$",
+      "description": "Unique agent identifier in format: name-type-number"
+    },
+    "ownerId": {
+      "type": "string",
+      "description": "User ID of the agent owner"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 50,
+      "description": "Display name of the agent"
+    },
+    "imageUrl": {
+      "type": "string",
+      "format": "uri-reference",
+      "description": "URL to agent avatar image"
+    },
+    "rank": {
+      "type": "string",
+      "enum": ["Bronze", "Silver", "Gold", "Platinum"],
+      "description": "Agent rank determining speed and capabilities"
+    },
+    "type": {
+      "type": "string",
+      "enum": ["Assistant", "Mentor", "Specialist"],
+      "description": "Agent type determining learning capabilities"
+    },
+    "provider": {
+      "type": "string",
+      "enum": ["gemini", "google", "openai"],
+      "description": "AI model provider"
+    },
+    "modelConfig": {
+      "type": "object",
+      "properties": {
+        "primary": {
+          "type": "object",
+          "properties": {
+            "provider": {"type": "string"},
+            "model": {"type": "string"},
+            "temperature": {"type": "number", "minimum": 0, "maximum": 2}
+          },
+          "required": ["provider", "model", "temperature"]
+        },
+        "fallback": {
+          "type": "object",
+          "properties": {
+            "provider": {"type": "string"},
+            "model": {"type": "string"},
+            "temperature": {"type": "number"}
+          }
+        }
+      },
+      "required": ["primary"]
+    },
+    "nationality": {
+      "type": "string",
+      "description": "Cultural identity of the agent"
+    },
+    "language": {
+      "type": "string",
+      "pattern": "^[a-z]{2}-[A-Z]{2}$",
+      "description": "Language code in ISO format (e.g., en-US)"
+    },
+    "voiceId": {
+      "type": "string",
+      "description": "Voice synthesis identifier"
+    },
+    "hasVoiceChat": {
+      "type": "boolean",
+      "description": "Whether agent supports two-way voice communication"
+    },
+    "hasCommentator": {
+      "type": "boolean",
+      "description": "Whether agent provides one-way commentary"
+    },
+    "hasMemory": {
+      "type": "boolean",
+      "description": "Whether agent can remember user preferences"
+    },
+    "toolkit": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "observation",
+          "learn",
+          "specialist_detection",
+          "general_gaming",
+          "voice_instruction",
+          "event_detection",
+          "team_messaging",
+          "turel"
+        ]
+      },
+      "description": "Array of enabled tools"
+    },
+    "specialization": {
+      "oneOf": [
+        {"type": "null"},
+        {
+          "type": "object",
+          "properties": {
+            "games": {
+              "type": "array",
+              "items": {"type": "string"}
+            },
+            "focus": {"type": "string"},
+            "specialistType": {
+              "type": "string",
+              "enum": ["Trained", "Experience"]
+            },
+            "trainedSpecializations": {
+              "type": "array",
+              "items": {"type": "string"}
+            }
+          },
+          "required": ["games", "focus", "specialistType"]
+        }
+      ]
+    },
+    "experience": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "game": {"type": "string"},
+          "hoursPlayed": {"type": "number", "minimum": 0}
+        },
+        "required": ["game", "hoursPlayed"]
+      }
+    },
+    "achievements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {"type": "string"},
+          "game": {"type": "string"},
+          "mode": {"type": "string"},
+          "earnedAt": {"type": "string", "format": "date-time"},
+          "hoursRequired": {"type": "number"},
+          "badgeId": {"type": "string"}
+        },
+        "required": ["type", "game", "mode", "earnedAt", "hoursRequired", "badgeId"]
+      }
+    },
+    "progressionEnabled": {
+      "type": "boolean",
+      "description": "Whether agent can accumulate experience"
+    },
+    "marketplaceStatus": {
+      "type": "object",
+      "properties": {
+        "isPublished": {"type": "boolean"},
+        "isHirable": {"type": "boolean"},
+        "publishedAt": {"type": "string", "format": "date-time"},
+        "pricing": {
+          "type": "object",
+          "properties": {
+            "baseRate": {"type": "number", "minimum": 0},
+            "currency": {"type": "string", "enum": ["DOF"]},
+            "unit": {"type": "string", "enum": ["per_hour_equivalent"]}
+          },
+          "required": ["baseRate", "currency", "unit"]
+        },
+        "availability": {
+          "type": "object",
+          "properties": {
+            "schedule": {"type": "string", "enum": ["always", "scheduled"]}
+          },
+          "required": ["schedule"]
+        }
+      },
+      "required": ["isPublished", "isHirable", "pricing", "availability"]
+    },
+    "configuration": {
+      "type": "object",
+      "description": "Complete session configuration for the agent"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "isSystemAgent": {
+      "type": "boolean",
+      "description": "Whether this is a platform-owned agent"
+    }
+  },
+  "required": [
+    "id",
+    "ownerId",
+    "name",
+    "imageUrl",
+    "rank",
+    "type",
+    "provider",
+    "modelConfig",
+    "nationality",
+    "language",
+    "voiceId",
+    "hasVoiceChat",
+    "hasCommentator",
+    "hasMemory",
+    "toolkit",
+    "experience",
+    "achievements",
+    "progressionEnabled",
+    "marketplaceStatus",
+    "configuration",
+    "createdAt",
+    "updatedAt",
+    "version"
+  ],
+  "additionalProperties": false,
+  "dependencies": {
+    "hasMemory": {
+      "properties": {
+        "hasVoiceChat": {"const": true}
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {"type": {"const": "Mentor"}}
+      },
+      "then": {
+        "properties": {
+          "toolkit": {
+            "contains": {"const": "learn"}
+          },
+          "progressionEnabled": {"const": true}
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {"type": {"const": "Specialist"}}
+      },
+      "then": {
+        "properties": {
+          "specialization": {"not": {"type": "null"}}
+        }
+      }
+    },
+    {
+      "not": {
+        "properties": {
+          "hasVoiceChat": {"const": true},
+          "hasCommentator": {"const": true}
+        }
+      }
+    }
+  ]
+} 

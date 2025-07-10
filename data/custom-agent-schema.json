@@ -1,0 +1,423 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Custom Agent Creation Schema",
+  "description": "Schema for user-created JIGA agents",
+  
+  "definitions": {
+    "creationRequest": {
+      "type": "object",
+      "discriminator": {
+        "propertyName": "type"
+      },
+      "oneOf": [
+        { "$ref": "#/definitions/assistantCreationRequest" },
+        { "$ref": "#/definitions/mentorCreationRequest" }
+      ]
+    },
+    
+    "assistantCreationRequest": {
+      "type": "object",
+      "properties": {
+        "type": { "const": "assistant" },
+        "name": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 50,
+          "pattern": "^[a-zA-Z0-9 .,!?'-]+$"
+        },
+        "imageUrl": {
+          "type": "string",
+          "format": "uri"
+        },
+        "rank": {
+          "type": "string",
+          "enum": ["Bronze", "Silver", "Gold", "Platinum"]
+        },
+        "provider": {
+          "type": "string",
+          "enum": ["gemini", "google", "openai"]
+        },
+        "nationality": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 50
+        },
+        "language": {
+          "type": "string",
+          "pattern": "^[a-z]{2}-[A-Z]{2}$"
+        },
+        "voiceId": {
+          "type": "string"
+        },
+        "mode": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": ["voice_chat", "commentator", "silent"]
+            },
+            "hasMemory": {
+              "type": "boolean"
+            }
+          },
+          "required": ["type"],
+          "if": {
+            "properties": { "type": { "const": "voice_chat" } }
+          },
+          "then": {
+            "properties": { "hasMemory": { "type": "boolean" } }
+          },
+          "else": {
+            "properties": { "hasMemory": { "const": false } }
+          }
+        },
+        "toolkit": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "observation",
+              "learn",
+              "specialist_detection",
+              "general_gaming",
+              "voice_instruction",
+              "event_detection",
+              "team_messaging",
+              "turel"
+            ]
+          },
+          "minItems": 1,
+          "maxItems": 8,
+          "uniqueItems": true
+        },
+        "customBaseRate": {
+          "type": "number",
+          "minimum": 1000,
+          "maximum": 30000
+        }
+      },
+      "required": ["type", "name", "rank", "provider", "nationality", "language", "voiceId", "mode", "toolkit"]
+    },
+    
+    "mentorCreationRequest": {
+      "type": "object",
+      "properties": {
+        "type": { "const": "mentor" },
+        "name": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 50
+        },
+        "imageUrl": {
+          "type": "string",
+          "format": "uri"
+        },
+        "rank": {
+          "type": "string",
+          "enum": ["Silver", "Gold", "Platinum"]
+        },
+        "provider": {
+          "type": "string",
+          "enum": ["gemini", "google", "openai"]
+        },
+        "nationality": {
+          "type": "string"
+        },
+        "language": {
+          "type": "string",
+          "pattern": "^[a-z]{2}-[A-Z]{2}$"
+        },
+        "voiceId": {
+          "type": "string"
+        },
+        "trackedGames": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "maxItems": 10,
+          "uniqueItems": true
+        },
+        "toolkit": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "contains": {
+            "const": "learn"
+          }
+        },
+        "customBaseRate": {
+          "type": "number"
+        },
+        "marketplaceOptIn": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "required": ["type", "name", "rank", "provider", "nationality", "language", "voiceId", "trackedGames", "toolkit"]
+    },
+    
+    "customAgent": {
+      "allOf": [
+        { "$ref": "file:./agent-schema.json" },
+        {
+          "type": "object",
+          "properties": {
+            "creationMetadata": {
+              "type": "object",
+              "properties": {
+                "createdBy": {
+                  "type": "string",
+                  "description": "User ID who created the agent"
+                },
+                "creationCost": {
+                  "type": "number",
+                  "description": "DOFs spent to create this agent"
+                },
+                "creationType": {
+                  "type": "string",
+                  "enum": ["custom", "template", "clone"]
+                },
+                "templateId": {
+                  "type": "string",
+                  "description": "If created from template"
+                },
+                "clonedFrom": {
+                  "type": "string",
+                  "description": "If cloned from another agent"
+                }
+              },
+              "required": ["createdBy", "creationCost", "creationType"]
+            },
+            "customizationHistory": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "changes": {
+                    "type": "object"
+                  },
+                  "cost": {
+                    "type": "number"
+                  }
+                }
+              }
+            },
+            "ownershipHistory": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "ownerId": {
+                    "type": "string"
+                  },
+                  "acquiredAt": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "transferredAt": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "transferType": {
+                    "type": "string",
+                    "enum": ["created", "purchased", "gifted", "inherited"]
+                  }
+                }
+              }
+            }
+          },
+          "required": ["creationMetadata"]
+        }
+      ]
+    },
+    
+    "rankConstraints": {
+      "type": "object",
+      "properties": {
+        "Bronze": {
+          "type": "object",
+          "properties": {
+            "availableProviders": {
+              "type": "array",
+              "items": { "const": "gemini" }
+            },
+            "maxTools": { "const": 3 },
+            "availableTools": {
+              "type": "array",
+              "items": {
+                "enum": ["observation", "event_detection", "general_gaming"]
+              }
+            },
+            "baseRateRange": {
+              "type": "object",
+              "properties": {
+                "min": { "const": 2500 },
+                "max": { "const": 4000 }
+              }
+            },
+            "creationCost": { "const": 10000 },
+            "canCreateMentor": { "const": false }
+          }
+        },
+        "Silver": {
+          "type": "object",
+          "properties": {
+            "availableProviders": {
+              "type": "array",
+              "items": {
+                "enum": ["gemini", "google"]
+              }
+            },
+            "maxTools": { "const": 5 },
+            "baseRateRange": {
+              "type": "object",
+              "properties": {
+                "min": { "const": 4000 },
+                "max": { "const": 7000 }
+              }
+            },
+            "creationCost": { "const": 25000 },
+            "mentorCost": { "const": 50000 },
+            "canCreateMentor": { "const": true }
+          }
+        },
+        "Gold": {
+          "type": "object",
+          "properties": {
+            "availableProviders": {
+              "type": "array",
+              "items": {
+                "enum": ["gemini", "google", "openai"]
+              }
+            },
+            "maxTools": { "const": 6 },
+            "baseRateRange": {
+              "type": "object",
+              "properties": {
+                "min": { "const": 7000 },
+                "max": { "const": 12000 }
+              }
+            },
+            "creationCost": { "const": 50000 },
+            "mentorCost": { "const": 100000 },
+            "canCreateMentor": { "const": true }
+          }
+        },
+        "Platinum": {
+          "type": "object",
+          "properties": {
+            "availableProviders": {
+              "type": "array",
+              "items": {
+                "enum": ["gemini", "google", "openai"]
+              }
+            },
+            "maxTools": { "const": 8 },
+            "baseRateRange": {
+              "type": "object",
+              "properties": {
+                "min": { "const": 12000 },
+                "max": { "const": 25000 }
+              }
+            },
+            "creationCost": { "const": 100000 },
+            "mentorCost": { "const": 200000 },
+            "canCreateMentor": { "const": true }
+          }
+        }
+      }
+    },
+    
+    "toolComponent": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "icon": {
+          "type": "string",
+          "format": "uri-reference"
+        },
+        "requiredRank": {
+          "type": "string",
+          "enum": ["Bronze", "Silver", "Gold", "Platinum"]
+        },
+        "dofConsumption": {
+          "type": "number",
+          "minimum": 0
+        },
+        "dependencies": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "exclusive": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "enabledFeatures": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": ["id", "name", "description", "icon", "requiredRank", "dofConsumption", "enabledFeatures"]
+    },
+    
+    "featureBundle": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "includedTools": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "mode": {
+          "type": "string",
+          "enum": ["voice_chat", "commentator", "silent"]
+        },
+        "targetUser": {
+          "type": "string"
+        },
+        "baseRate": {
+          "type": "number"
+        },
+        "rank": {
+          "type": "string",
+          "enum": ["Bronze", "Silver", "Gold", "Platinum"]
+        },
+        "cost": {
+          "type": "number"
+        }
+      },
+      "required": ["id", "name", "description", "includedTools", "mode", "targetUser", "baseRate", "rank", "cost"]
+    }
+  }
+} 
